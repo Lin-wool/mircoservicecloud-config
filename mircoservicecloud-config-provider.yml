@@ -1,4 +1,4 @@
-spring:
+ï»¿spring:
   profiles:
     active:
       - dev
@@ -13,30 +13,30 @@ spring:
     url: jdbc:mysql://192.168.155.243:3306/cloudDB01
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    # ÏÂÃæÎªÁ¬½Ó³ØµÄ²¹³äÉèÖÃ£¬Ó¦ÓÃµ½ÉÏÃæËùÓĞÊı¾İÔ´ÖĞ
-    # ³õÊ¼»¯´óĞ¡£¬×îĞ¡£¬×î´ó
+    # ä¸‹é¢ä¸ºè¿æ¥æ± çš„è¡¥å……è®¾ç½®ï¼Œåº”ç”¨åˆ°ä¸Šé¢æ‰€æœ‰æ•°æ®æºä¸­
+    # åˆå§‹åŒ–å¤§å°ï¼Œæœ€å°ï¼Œæœ€å¤§
     initial-size: 5
     min-idle: 5
     max-active: 20
-    # ÅäÖÃ»ñÈ¡Á¬½ÓµÈ´ı³¬Ê±µÄÊ±¼ä
+    # é…ç½®è·å–è¿æ¥ç­‰å¾…è¶…æ—¶çš„æ—¶é—´
     max-wait: 60000
-    # ÅäÖÃ¼ä¸ô¶à¾Ã²Å½øĞĞÒ»´Î¼ì²â£¬¼ì²âĞèÒª¹Ø±ÕµÄ¿ÕÏĞÁ¬½Ó£¬µ¥Î»ÊÇºÁÃë
+    # é…ç½®é—´éš”å¤šä¹…æ‰è¿›è¡Œä¸€æ¬¡æ£€æµ‹ï¼Œæ£€æµ‹éœ€è¦å…³é—­çš„ç©ºé—²è¿æ¥ï¼Œå•ä½æ˜¯æ¯«ç§’
     time-between-eviction-runs-millis: 60000
-    # ÅäÖÃÒ»¸öÁ¬½ÓÔÚ³ØÖĞ×îĞ¡Éú´æµÄÊ±¼ä£¬µ¥Î»ÊÇºÁÃë
+    # é…ç½®ä¸€ä¸ªè¿æ¥åœ¨æ± ä¸­æœ€å°ç”Ÿå­˜çš„æ—¶é—´ï¼Œå•ä½æ˜¯æ¯«ç§’
     min-evictable-idle-time-millis: 300000
     validation-query: SELECT 1 FROM DUAL
     test-while-idle: true
     test-on-borrow: false
     test-on-return: false
-    # ´ò¿ªPSCache£¬²¢ÇÒÖ¸¶¨Ã¿¸öÁ¬½ÓÉÏPSCacheµÄ´óĞ¡
+    # æ‰“å¼€PSCacheï¼Œå¹¶ä¸”æŒ‡å®šæ¯ä¸ªè¿æ¥ä¸ŠPSCacheçš„å¤§å°
     pool-prepared-statements: true
-    #   ÅäÖÃ¼à¿ØÍ³¼ÆÀ¹½ØµÄfilters£¬È¥µôºó¼à¿Ø½çÃæsqlÎŞ·¨Í³¼Æ£¬'wall'ÓÃÓÚ·À»ğÇ½
+    #   é…ç½®ç›‘æ§ç»Ÿè®¡æ‹¦æˆªçš„filtersï¼Œå»æ‰åç›‘æ§ç•Œé¢sqlæ— æ³•ç»Ÿè®¡ï¼Œ'wall'ç”¨äºé˜²ç«å¢™
     max-pool-prepared-statement-per-connection-size: 20
     filters: stat,wall
     use-global-data-source-stat: true
-    # Í¨¹ıconnectPropertiesÊôĞÔÀ´´ò¿ªmergeSql¹¦ÄÜ£»ÂıSQL¼ÇÂ¼
+    # é€šè¿‡connectPropertieså±æ€§æ¥æ‰“å¼€mergeSqlåŠŸèƒ½ï¼›æ…¢SQLè®°å½•
     connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
-#    ÅäÖÃmybatisÈ«¾ÖÅäÖÃËùÔÚÎ»ÖÃÒÑ¾­mapperÅäÖÃÎÄ¼şËùÔÚÎ»ÖÃ
+#    é…ç½®mybatiså…¨å±€é…ç½®æ‰€åœ¨ä½ç½®å·²ç»mapperé…ç½®æ–‡ä»¶æ‰€åœ¨ä½ç½®
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
@@ -49,10 +49,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
-  #   Ä¬ÈÏ·şÎñÃû³Æ instance.instance.id
+  #   é»˜è®¤æœåŠ¡åç§° instance.instance.id
   instance:
     instance-id: microservice-dept-8001
-    #    ·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾ipµØÖ·
+    #    è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºipåœ°å€
     prefer-ip-address: true
 ---
 spring:
@@ -65,30 +65,30 @@ spring:
     url: jdbc:mysql://192.168.155.243:3306/cloudDB02
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    # ÏÂÃæÎªÁ¬½Ó³ØµÄ²¹³äÉèÖÃ£¬Ó¦ÓÃµ½ÉÏÃæËùÓĞÊı¾İÔ´ÖĞ
-    # ³õÊ¼»¯´óĞ¡£¬×îĞ¡£¬×î´ó
+    # ä¸‹é¢ä¸ºè¿æ¥æ± çš„è¡¥å……è®¾ç½®ï¼Œåº”ç”¨åˆ°ä¸Šé¢æ‰€æœ‰æ•°æ®æºä¸­
+    # åˆå§‹åŒ–å¤§å°ï¼Œæœ€å°ï¼Œæœ€å¤§
     initial-size: 5
     min-idle: 5
     max-active: 20
-    # ÅäÖÃ»ñÈ¡Á¬½ÓµÈ´ı³¬Ê±µÄÊ±¼ä
+    # é…ç½®è·å–è¿æ¥ç­‰å¾…è¶…æ—¶çš„æ—¶é—´
     max-wait: 60000
-    # ÅäÖÃ¼ä¸ô¶à¾Ã²Å½øĞĞÒ»´Î¼ì²â£¬¼ì²âĞèÒª¹Ø±ÕµÄ¿ÕÏĞÁ¬½Ó£¬µ¥Î»ÊÇºÁÃë
+    # é…ç½®é—´éš”å¤šä¹…æ‰è¿›è¡Œä¸€æ¬¡æ£€æµ‹ï¼Œæ£€æµ‹éœ€è¦å…³é—­çš„ç©ºé—²è¿æ¥ï¼Œå•ä½æ˜¯æ¯«ç§’
     time-between-eviction-runs-millis: 60000
-    # ÅäÖÃÒ»¸öÁ¬½ÓÔÚ³ØÖĞ×îĞ¡Éú´æµÄÊ±¼ä£¬µ¥Î»ÊÇºÁÃë
+    # é…ç½®ä¸€ä¸ªè¿æ¥åœ¨æ± ä¸­æœ€å°ç”Ÿå­˜çš„æ—¶é—´ï¼Œå•ä½æ˜¯æ¯«ç§’
     min-evictable-idle-time-millis: 300000
     validation-query: SELECT 1 FROM DUAL
     test-while-idle: true
     test-on-borrow: false
     test-on-return: false
-    # ´ò¿ªPSCache£¬²¢ÇÒÖ¸¶¨Ã¿¸öÁ¬½ÓÉÏPSCacheµÄ´óĞ¡
+    # æ‰“å¼€PSCacheï¼Œå¹¶ä¸”æŒ‡å®šæ¯ä¸ªè¿æ¥ä¸ŠPSCacheçš„å¤§å°
     pool-prepared-statements: true
-    #   ÅäÖÃ¼à¿ØÍ³¼ÆÀ¹½ØµÄfilters£¬È¥µôºó¼à¿Ø½çÃæsqlÎŞ·¨Í³¼Æ£¬'wall'ÓÃÓÚ·À»ğÇ½
+    #   é…ç½®ç›‘æ§ç»Ÿè®¡æ‹¦æˆªçš„filtersï¼Œå»æ‰åç›‘æ§ç•Œé¢sqlæ— æ³•ç»Ÿè®¡ï¼Œ'wall'ç”¨äºé˜²ç«å¢™
     max-pool-prepared-statement-per-connection-size: 20
     filters: stat,wall
     use-global-data-source-stat: true
-    # Í¨¹ıconnectPropertiesÊôĞÔÀ´´ò¿ªmergeSql¹¦ÄÜ£»ÂıSQL¼ÇÂ¼
+    # é€šè¿‡connectPropertieså±æ€§æ¥æ‰“å¼€mergeSqlåŠŸèƒ½ï¼›æ…¢SQLè®°å½•
     connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
-#    ÅäÖÃmybatisÈ«¾ÖÅäÖÃËùÔÚÎ»ÖÃÒÑ¾­mapperÅäÖÃÎÄ¼şËùÔÚÎ»ÖÃ
+#    é…ç½®mybatiså…¨å±€é…ç½®æ‰€åœ¨ä½ç½®å·²ç»mapperé…ç½®æ–‡ä»¶æ‰€åœ¨ä½ç½®
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
@@ -101,8 +101,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
-  #   Ä¬ÈÏ·şÎñÃû³Æ instance.instance.id
+  #   é»˜è®¤æœåŠ¡åç§° instance.instance.id
   instance:
     instance-id: microservice-dept-8001
-    #    ·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾ipµØÖ·
+    #    è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºipåœ°å€
     prefer-ip-address: true
